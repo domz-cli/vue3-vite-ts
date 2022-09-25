@@ -9,7 +9,7 @@
       "resolveJsonModule": true,
       "esModuleInterop": true, // 支持多模块之间的互相转换，互相之间引用
       "lib": ["esnext", "dom"], // 
-      "types":["vite/client","jest"],
+      "types":["vite/client"],
       "baseUrl": "./",
       "paths": {
         "@": ["./src"]
