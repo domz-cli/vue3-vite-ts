@@ -15,6 +15,7 @@ module.exports = {
         ecmaVersion: 2021,
     },
     rules: {
+        'vue/multi-word-component-names': 0,
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         'prettier/prettier': ['error', { endOfLine: 'auto' }],

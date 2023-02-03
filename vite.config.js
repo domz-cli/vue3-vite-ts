@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue';
 
 import { resolve } from 'path';
 import { viteMockServe } from 'vite-plugin-mock';
+import eslintPlugin from 'vite-plugin-eslint';
 
 export default (configEnv) => {
     const viteEnv = loadEnv(configEnv.mode, process.cwd());
@@ -23,6 +24,17 @@ export default (configEnv) => {
                 },
             },
         },
-        plugins: [vue(), viteMockServe({})],
+        plugins: [
+            vue(),
+            viteMockServe({}),
+            eslintPlugin({
+                include: [
+                    'src/**/*.js',
+                    'src/**/*.vue',
+                    'src/*.js',
+                    'src/*.vue',
+                ],
+            }),
+        ],
     };
 };

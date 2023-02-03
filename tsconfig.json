@@ -12,7 +12,7 @@
       "types":["vite/client","jest"],
       "baseUrl": "./",
       "paths": {
-        "@": ["./src"]
+        "@/*": ["src/*"]
       }
     },
     // 包含哪些ts文件
