@@ -4,6 +4,11 @@
 # 技术栈
 Vite + Vue3 + Yypescript + Husky + Eslint + Prettier + Jest
 
+
+### 启动
+npm i  
+npm run dev  
+
 ## 分支说明
     main 
         基础vue3 + ts + vite 搭建。

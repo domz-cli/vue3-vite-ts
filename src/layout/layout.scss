@@ -1,0 +1,73 @@
+$header-height: 68px;
+$aside-width: 220px;
+$tags-height: 30px;
+
+
+.doz-theme-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 68px;
+    background: $color-header;
+    box-shadow: 0 2px 1px 0px  rgba(48, 48, 48, 0.2);
+    position: relative;
+    z-index: 2;
+}
+.doz-header-right{
+    padding-right: 20px;
+}
+.logo {
+    width: auto;
+    height: $header-height;
+    padding: 10px;
+}
+.logo-group {
+    display: inline-block;
+    width: $aside-width;
+    text-align: center;
+    transition: all ease 0.2s;
+}
+.toggle-aside-btn {
+    color: $icon-color;
+    padding: 0 10px 0 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    &:hover {
+        color: $color-primary;
+    }
+}
+
+.doz-theme-container {
+    height: calc(100vh - $header-height);
+}
+
+.doz-theme-container-main {
+    // width: 100%;
+    flex: 1;
+}
+.doz-theme-container-main-layer {
+    height: 100%;
+    overflow: hidden;
+}
+.doz-theme-container-noside {
+    margin: 0px;
+}
+.doz-theme-container-main-body {
+    // margin: calc(10px + $tags-height) 10px 0 10px;
+    margin: 10px 10px 0 10px;
+    height: calc(100% - 10px);
+    // overflow: auto;
+}
+.doz-theme-container-main-header {
+    // position: fixed;
+    // z-index: 10;
+    width: 100%;
+    box-shadow: 0 1px 2px 1px rgba(148, 148, 148, 0.1);
+}
+.no-margin {
+    margin: 0;
+}

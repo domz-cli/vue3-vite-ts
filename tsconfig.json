@@ -1,20 +1,29 @@
 {
-    "compilerOptions": { // 编译选项
-      "target": "esnext", // 编译的目标
-      "module": "esnext", // 采用的哪种模块规范，进行编写项目的
-      "moduleResolution": "node", // 包查找规则 classic | node（node即找node_modules）
-      "strict": true,
-      "jsx": "preserve", // react | preserve(保留不转换)
-      "sourceMap": true,
-      "resolveJsonModule": true,
-      "esModuleInterop": true, // 支持多模块之间的互相转换，互相之间引用
-      "lib": ["esnext", "dom"], // 
-      "types":["vite/client","jest"],
-      "baseUrl": "./",
-      "paths": {
-        "@/*": ["src/*"]
-      }
-    },
-    // 包含哪些ts文件
-    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.js", "tests/**/*.spec.ts", "tests/test.ts"]
+  "compilerOptions": { // 编译选项
+    "target": "esnext", // 编译的目标
+    "module": "esnext", // 采用的哪种模块规范，进行编写项目的
+    "moduleResolution": "node", // 包查找规则 classic | node（node即找node_modules）
+    "strict": true,
+    "jsx": "preserve", // react | preserve(保留不转换)
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true, // 支持多模块之间的互相转换，互相之间引用
+    "lib": ["esnext", "dom"], // 
+    "types":["vite/client","jest", "node", "webpack-env", "vite-svg-loader"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  // 包含哪些ts文件
+  "include": [
+    "src/main.ts",
+    "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", 
+    "src/**/*.vue", "tests/**/*.spec.ts", "tests/test.ts",
+    "types/*.d.ts"
+  ],
+  /** 编译器默认排除的编译文件 */
+  "exclude": ["node_modules", "dist"]
 }
