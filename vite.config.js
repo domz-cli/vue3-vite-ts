@@ -16,6 +16,8 @@ export default (configEnv) => {
             },
         },
         server: {
+            open: false,
+            port: 2910,
             proxy: {
                 '/api': {
                     target: 'http://jsonplaceholder.typicode.com',
@@ -28,12 +30,7 @@ export default (configEnv) => {
             vue(),
             viteMockServe({}),
             eslintPlugin({
-                include: [
-                    'src/**/*.js',
-                    'src/**/*.vue',
-                    'src/*.js',
-                    'src/*.vue',
-                ],
+                include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
             }),
         ],
     };
