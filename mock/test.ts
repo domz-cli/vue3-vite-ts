@@ -8,9 +8,11 @@ export default [
             return {
                 code: 200,
                 data: {
-                    name: 'vben',
-                    title: '标题',
-                    body: '内容'
+                    rows: [{
+                        name: 'vben',
+                        title: '标题',
+                        body: '内容',
+                    }]
                 },
             };
         },

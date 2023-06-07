@@ -40,7 +40,7 @@ export default (configEnv) => {
                     rewrite: (path) => path.replace(/^\/devapi/, ''),
                 },
                 '/localapi': {
-                    target: 'http://192.168.200.196:9991',
+                    target: 'http://xxxx.com',
                     changeOrigin: true,
                     rewrite: (path) => path.replace(/^\/localapi/, ''),
                 },

@@ -1,8 +1,8 @@
 # vue3-vite-ts
-开箱即用的前端项目框架
+开箱即用的Vue3前端项目框架
 
 # 技术栈
-Vite + Vue3 + Yypescript + Husky + Eslint + Prettier + Jest
+Vite + Vue3 + TypeScript + Pinia + Eslint + Prettier + Husky + Jest
 
 
 ### 启动
