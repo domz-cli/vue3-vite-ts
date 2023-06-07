@@ -1,6 +1,9 @@
 <template>
-    <div class="outer">Hello World</div>
-    <button @click="handleClick">{{ state.count }}</button>
+    <div class="outer">Hello World For Vue3</div>
+    <div class="outer">
+        <p>Vite + Vue3 + Typescript + Eslint + Prettier + Husky + Jest</p>
+        <button @click="handleClick">{{ state.count }}</button>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -28,7 +31,12 @@ fetch('/apiMock/get')
 <style lang="scss" scoped>
 .outer {
     font-size: 24px;
-
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    p {
+        font-weight: normal;
+    }
     &:hover {
         color: blueviolet;
     }
