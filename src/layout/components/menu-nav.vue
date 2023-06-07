@@ -1,5 +1,5 @@
 <template>
-    <aside class="doz-aside" :style="{ width: asideWidth, minWidth: asideWidth }" :class="{ 'no-border': layoutPageType }">
+    <aside class="domz-aside" :style="{ width: asideWidth, minWidth: asideWidth }" :class="{ 'no-border': layoutPageType }">
         <el-menu
             class="aside-menu"
             :mode="mode"
@@ -116,7 +116,7 @@ defineProps({
 
 <style lang="scss" scoped>
 @import './../layout.scss';
-.doz-aside {
+.domz-aside {
     width: $aside-width;
     height: 100%;
     background: #fff;

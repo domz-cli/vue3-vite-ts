@@ -5,7 +5,7 @@ interface IThemeList {
     name: ThemeName;
 }
 
-const SYSTEM_NAME = 'doz-vite';
+const SYSTEM_NAME = 'domz-vite';
 
 /** 缓存数据时用到的 Key */
 export class CacheKey {

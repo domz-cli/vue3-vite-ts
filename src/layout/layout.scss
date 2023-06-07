@@ -3,7 +3,7 @@ $aside-width: 220px;
 $tags-height: 30px;
 
 
-.doz-theme-header {
+.domz-theme-header {
     display: flex;
     justify-content: space-between;
     width: 100vw;
@@ -13,7 +13,7 @@ $tags-height: 30px;
     position: relative;
     z-index: 2;
 }
-.doz-header-right{
+.domz-header-right{
     padding-right: 20px;
 }
 .logo {
@@ -41,28 +41,28 @@ $tags-height: 30px;
     }
 }
 
-.doz-theme-container {
+.domz-theme-container {
     height: calc(100vh - $header-height);
 }
 
-.doz-theme-container-main {
+.domz-theme-container-main {
     // width: 100%;
     flex: 1;
 }
-.doz-theme-container-main-layer {
+.domz-theme-container-main-layer {
     height: 100%;
     overflow: hidden;
 }
-.doz-theme-container-noside {
+.domz-theme-container-noside {
     margin: 0px;
 }
-.doz-theme-container-main-body {
+.domz-theme-container-main-body {
     // margin: calc(10px + $tags-height) 10px 0 10px;
     margin: 10px 10px 0 10px;
     height: calc(100% - 10px);
     // overflow: auto;
 }
-.doz-theme-container-main-header {
+.domz-theme-container-main-header {
     // position: fixed;
     // z-index: 10;
     width: 100%;

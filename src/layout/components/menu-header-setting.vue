@@ -1,5 +1,6 @@
 <template>
     <div class="right-menu flex-align-center">
+        <el-icon @click="changeStatus" class="right-menu-item search-icon"><Search /></el-icon>
         <Screenfull v-if="showScreenfull" class="right-menu-item" />
         <ThemeSwitch v-if="showThemeSwitch" class="right-menu-item" />
         <Notify v-if="showNotify" class="right-menu-item" />
@@ -29,16 +30,19 @@
 import { computed } from 'vue';
 import { useSettingsStore } from '@/store/modules/settings';
 import { useRouter } from 'vue-router';
-import { UserFilled } from '@element-plus/icons-vue';
+import { UserFilled, Search } from '@element-plus/icons-vue';
 import { userStoreHook } from '@/store/modules/user';
 
 import ThemeSwitch from '@/components/ThemeSwitch/index.vue';
 import Screenfull from '@/components/Screenfull/index.vue';
 import Notify from '@/components/Notify/index.vue';
 
+import { globalSettingStoreHook } from '@/store/modules/global';
+
 const settingsStore = useSettingsStore();
 const userStore = userStoreHook();
 const router = useRouter();
+const globalSettingStore = globalSettingStoreHook();
 
 const showScreenfull = computed(() => {
     return settingsStore.showScreenfull;
@@ -54,11 +58,19 @@ const logout = () => {
     userStore.logout();
     router.push('/login');
 };
+
+const changeStatus = () => {
+    globalSettingStore.searchOn = !globalSettingStore.searchOn;
+};
 </script>
 
 <style lang="scss" scoped>
 .right-menu-item {
     margin-left: 20px;
     cursor: pointer;
+}
+:deep(.search-icon) {
+    font-size: 18px;
+    color: #909399;
 }
 </style>
